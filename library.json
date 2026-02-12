@@ -1,0 +1,41 @@
+{
+    "name": "TinyCBOR",
+    "version": "0.7.0",
+    "description": "The TinyCBOR library is a small CBOR encoder and decoder library, optimized for very fast operation with very small footprint. The main encoder and decoder functions do not allocate memory.",
+    "authors": [
+        {
+            "name": "Intel Corporation",
+            "maintainer": false
+        },
+        {
+            "name": "Gabriel Brzeziński (Wihmajster)",
+            "email": "gabriel@gabrielb.dev",
+            "url": "https://github.com/Wihmajster",
+            "maintainer": true
+        }
+    ],
+    "keywords": [
+        "cbor",
+        "serialization",
+        "iot"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/intel/tinycbor.git"
+    },
+    "license": "MIT",
+    "frameworks": "*",
+    "platforms": "*",
+    "build": {
+        "includeDir": "src",
+        "srcDir": "src",
+        "srcFilter": [
+            "+<*.c>",
+            "+<*.h>",
+            "-<open_memstream.c>"
+        ],
+        "flags": [
+            "-DWITHOUT_OPEN_MEMSTREAM"
+        ]
+    }
+}
